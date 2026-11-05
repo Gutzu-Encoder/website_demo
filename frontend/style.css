@@ -1,0 +1,164 @@
+:root {
+  --bg: #f5f6fa;
+  --surface: #ffffff;
+  --text: #1f2430;
+  --muted: #6b7280;
+  --primary: #4f46e5;
+  --primary-active: #3730a3;
+  --selected: #c7d2fe;
+  --border: #e2e4ea;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 24px 20px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 8px 0 4px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin: 8px 0 20px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+#welcome-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+input[type="text"] {
+  padding: 14px;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+input[type="text"]:focus {
+  outline: 2px solid var(--primary);
+}
+
+.btn-primary {
+  margin-top: 8px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.btn-primary:active {
+  background: var(--primary-active);
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.error.hidden {
+  display: none;
+}
+
+.progress {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0 0 4px;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.choice-btn {
+  padding: 16px;
+  font-size: 1rem;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.choice-btn.selected {
+  background: var(--selected);
+  border-color: var(--primary);
+}
+
+.choice-btn:disabled {
+  cursor: default;
+}
+
+.score {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.summary-list {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-list li {
+  font-size: 0.95rem;
+}
+
+.summary-list .your-answer {
+  color: var(--muted);
+}
+
+.summary-list .correct-mark {
+  font-weight: 600;
+}
+
+.summary-list .correct-mark.correct {
+  color: #16a34a;
+}
+
+.summary-list .correct-mark.incorrect {
+  color: #dc2626;
+}
